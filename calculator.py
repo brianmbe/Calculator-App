@@ -3,7 +3,7 @@ from tkinter import *
 
 root = Tk()
 root.title('Calculator App')
-# root.config(padx=30, pady=30)
+root.config(padx=30, pady=30)
 
 
 # functions
@@ -33,12 +33,15 @@ number_click.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
 button_add = Button(root, text='+', padx=20, pady=20,
                     bg='#06C1CF', command=lambda: click_number('+'))
 button_add.grid(row=4, column=3, pady=10, padx=10)
+
 button_subtract = Button(root, text='-', padx=20, pady=20,
                          bg='#06C1CF', command=lambda: click_number('-'))
 button_subtract.grid(row=3, column=3, pady=10, padx=10)
+
 button_multiply = Button(root, text='×', padx=20, pady=20,
                          bg='#06C1CF', command=lambda: click_number('*'))
 button_multiply.grid(row=2, column=3, pady=10, padx=10)
+
 button_divide = Button(root, text='÷', padx=20, pady=20,
                        bg='#06C1CF', command=lambda: click_number('/'))
 button_divide.grid(row=1, column=3, pady=10, padx=10)
@@ -46,9 +49,11 @@ button_divide.grid(row=1, column=3, pady=10, padx=10)
 button_ac = Button(root, text='AC', padx=60, pady=20,
                    bg='#F29E2C', command=clear)
 button_ac.grid(row=1, column=0, columnspan=2, pady=10, padx=10)
-button_del = Button(root, text='←', padx=20, pady=20,
-                    bg='#06C1CF', command=remove_number)
-button_del.grid(row=1, column=2, pady=10, padx=10)
+
+button_delete = Button(root, text='←', padx=20, pady=20,
+                       bg='#06C1CF', command=remove_number)
+button_delete.grid(row=1, column=2, pady=10, padx=10)
+
 button_equals = Button(root, text='=', padx=60, pady=20,
                        bg='#F29E2C', command=equal)
 button_equals.grid(row=5, column=2, columnspan=2, pady=10, padx=10)
